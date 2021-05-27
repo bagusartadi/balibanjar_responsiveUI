@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/artadot.dart';
-import 'package:flutter_facebook_responsive_ui/screens/zscreens.dart';
+import 'package:flutter_facebook_responsive_ui/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,18 +13,19 @@ class MyApp extends StatelessWidget {
       title: 'balibanjar UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        accentColor: WarnaArtadi.warnatiga,
+        accentColor: WarnaArtadi.warnalima,
         appBarTheme: AppBarTheme(
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: WarnaArtadi.warnadasar)),
-        textTheme:
-            TextTheme(bodyText1: TextStyle(color: WarnaArtadi.warnadasar)),
-        dialogBackgroundColor: WarnaArtadi.warnadasar,
+            backgroundColor: WarnaArtadi.warnadasar,
+            titleSpacing: 1.5,
+            titleTextStyle: TextStyle(color: Colors.blue, fontSize: 30),
+            iconTheme: IconThemeData(color: Colors.white)),
+        textTheme: TextTheme(bodyText1: TextStyle(color: Colors.white)),
+        dialogBackgroundColor: WarnaArtadi.warnalima,
         primarySwatch: Colors.lightGreen,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: WarnaArtadi.warnadasar,
       ),
-      home: NavHomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

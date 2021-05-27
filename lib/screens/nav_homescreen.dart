@@ -19,8 +19,8 @@ class _NavHomeScreenState extends State<NavHomeScreen> {
   final List<IconData> _icons = const [
     Icons.home,
     Icons.group_add,
-    Icons.favorite,
-    Icons.multiline_chart,
+    Icons.search_sharp,
+    Icons.family_restroom,
     // Icons.notifications_active_rounded,
   ];
   int _selectedIndex = 0;

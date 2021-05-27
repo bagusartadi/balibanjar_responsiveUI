@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/config/artadot.dart';
 import 'package:flutter_facebook_responsive_ui/data/main_data/data.dart';
 import 'package:flutter_facebook_responsive_ui/models/zmodels.dart';
+import 'package:flutter_facebook_responsive_ui/screens/zscreens.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/zwidgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,14 +50,10 @@ class _HomeScreenMobile extends StatelessWidget {
       slivers: [
         SliverAppBar(
           brightness: Brightness.light,
-          backgroundColor: Colors.white,
           title: Text(
             'balibanjar.com',
             style: const TextStyle(
-              color: WarnaArtadi.balibanjar,
-              fontSize: 28.0,
               fontWeight: FontWeight.bold,
-              letterSpacing: -1.2,
             ),
           ),
           centerTitle: true,
@@ -66,7 +62,10 @@ class _HomeScreenMobile extends StatelessWidget {
           actions: [
             GestureDetector(
               onTap: () {
-                print('edit profile');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -114,17 +113,17 @@ class _HomeScreenDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Flexible(
-          flex: 2,
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: MoreOptionsList(currentUser: currentUser),
-            ),
-          ),
-        ),
-        const Spacer(),
+        // Flexible(
+        //   flex: 2,
+        //   child: Align(
+        //     alignment: Alignment.centerLeft,
+        //     child: Padding(
+        //       padding: const EdgeInsets.all(12.0),
+        //       child: MoreOptionsList(currentUser: currentUser),
+        //     ),
+        //   ),
+        // ),
+        // const Spacer(),
         Container(
           width: 600.0,
           child: CustomScrollView(
@@ -151,7 +150,7 @@ class _HomeScreenDesktop extends StatelessWidget {
             ],
           ),
         ),
-        const Spacer(),
+        // const Spacer(),
         // Flexible(
         //   flex: 2,
         //   child: Align(

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/config/artadot.dart';
 import 'package:flutter_facebook_responsive_ui/data/zdata.dart';
 import 'package:flutter_facebook_responsive_ui/models/zmodels.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/responsive.dart';
+import 'package:flutter_facebook_responsive_ui/screens/zscreens.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/zwidgets.dart';
 
 class HomeScreenGI extends StatefulWidget {
@@ -51,14 +50,10 @@ class _HomeScreenMobile extends StatelessWidget {
       slivers: [
         SliverAppBar(
           brightness: Brightness.light,
-          backgroundColor: Colors.white,
           title: Text(
             'Group Name',
             style: const TextStyle(
-              color: WarnaArtadi.balibanjar,
-              fontSize: 28.0,
               fontWeight: FontWeight.bold,
-              letterSpacing: -1.2,
             ),
           ),
           centerTitle: true,
@@ -67,7 +62,10 @@ class _HomeScreenMobile extends StatelessWidget {
           actions: [
             GestureDetector(
               onTap: () {
-                print('edit profile');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
